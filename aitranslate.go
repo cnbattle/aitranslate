@@ -34,7 +34,7 @@ func main() {
 	text = getClipboardString()
 	if !once {
 		for {
-			time.Sleep(time.Millisecond * 50)
+			time.Sleep(time.Millisecond * 150)
 			newText := getClipboardString()
 			if !whatlang.IsEnglish(newText) {
 				continue

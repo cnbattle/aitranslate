@@ -20,6 +20,9 @@
 ./aitranslate -once // 只运行翻译一次,完成后退出
 ```
 
+## Tips
+> manjaro 可以开启`clipman`设置中的 `同步鼠标选择区`,实现选中自动翻译
+
 ## 依赖 `xsel`或`xclip`
 
 ```
