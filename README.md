@@ -1,5 +1,7 @@
 # ai  translate
 
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 > 获取粘贴版内容,判断是否为英语,是否翻译并通知翻译内容
 
 > 仅在`Manjaro`上测试,其他平台未知,有问题或建议请提交`Pull Requests`或`Issues`
