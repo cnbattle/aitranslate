@@ -2,7 +2,7 @@
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
-> 获取粘贴版内容,判断是否为英语,是否翻译并通知翻译内容
+> 监听粘贴版新的英文内容并翻译成中文
 
 > 仅在`Manjaro`上测试,其他平台未知,有问题或建议请提交`Pull Requests`或`Issues`
 
@@ -16,7 +16,8 @@
 ## 使用
 
 ```
-./aitranslate -auto // 然后就可以选中复制需要翻译的英文,就会自动翻译 显示翻译内容
+./aitranslate // 监听粘贴版新的英文内容并翻译
+./aitranslate -once // 只运行翻译一次,完成后退出
 ```
 
 ## 依赖 `xsel`或`xclip`
@@ -39,10 +40,10 @@ sudo dnf install xsel xclip
 ```
 ➜  ~ ./aitranslate -h
 Usage of ./aitranslate:
-  -auto
-        auto translate for clipboard english content.
   -c string
         translate channel:  Google or YouDao. (default "Google")
+  -once
+        run once, default auto translate for clipboard english content.
   -v    show version and exit.
 ```
 

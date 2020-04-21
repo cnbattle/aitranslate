@@ -13,7 +13,7 @@ var (
 	channel string
 	text    string
 	path    string
-	auto    bool
+	once    bool
 	Version string
 	v       bool
 )
@@ -21,7 +21,7 @@ var (
 func init() {
 	initFile()
 	flag.StringVar(&channel, "c", "Google", "translate channel:  Google or YouDao.")
-	flag.BoolVar(&auto, "auto", false, "auto translate for clipboard english content.")
+	flag.BoolVar(&once, "once", false, "run once, default auto translate for clipboard english content.")
 	flag.BoolVar(&v, "v", false, "show version and exit.")
 	flag.Parse()
 }
@@ -32,7 +32,7 @@ func main() {
 		return
 	}
 	text = getClipboardString()
-	if auto {
+	if !once {
 		for {
 			time.Sleep(time.Millisecond * 50)
 			newText := getClipboardString()
