@@ -10,7 +10,7 @@ import (
 
 // translates  Translate and  Notify
 func translates() {
-
+	beeep.Alert("", "自动翻译运行中...", "")
 	text = getClipboardString()
 	for {
 		time.Sleep(time.Millisecond * time.Duration(monitoringInterval))
