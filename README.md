@@ -24,7 +24,6 @@
 
 ```
 ./aitranslate // 监听粘贴版新的英文内容并翻译
-./aitranslate -once // 只运行翻译一次,完成后退出
 ```
 
 ## Tips
