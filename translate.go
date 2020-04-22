@@ -13,5 +13,5 @@ func translates() {
 		beeep.Alert("Error", err.Error(), getImagePath("warning"))
 		return
 	}
-	beeep.Notify(channel+" Translate", translateText, getImagePath("logo"))
+	beeep.Alert(channel+" Translate", translateText, getImagePath("logo"))
 }

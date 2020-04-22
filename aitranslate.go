@@ -10,18 +10,27 @@ import (
 )
 
 var (
-	channel string
-	text    string
-	path    string
-	once    bool
+	// 版本号
 	Version string
-	v       bool
+	// 翻译渠道
+	channel string
+	// 待翻译的文本
+	text string
+	// 通知logo
+	path string
+	// 是否单词运行
+	once bool
+	// 是否显示版本号
+	v bool
+	// 监听时间间隔
+	monitoringInterval int
 )
 
 func init() {
 	initFile()
 	flag.StringVar(&channel, "c", "Google", "translate channel:  Google or YouDao.")
-	flag.BoolVar(&once, "once", false, "run once, default auto translate for clipboard english content.")
+	flag.IntVar(&monitoringInterval, "t", 100, "monitoring interval, unit: ms.")
+	flag.BoolVar(&once, "once", false, "run once. (default \"auto translate\")")
 	flag.BoolVar(&v, "v", false, "show version and exit.")
 	flag.Parse()
 }
@@ -34,7 +43,7 @@ func main() {
 	text = getClipboardString()
 	if !once {
 		for {
-			time.Sleep(time.Millisecond * 150)
+			time.Sleep(time.Millisecond * time.Duration(monitoringInterval))
 			newText := getClipboardString()
 			if !whatlang.IsEnglish(newText) {
 				continue
