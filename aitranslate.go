@@ -3,10 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"strings"
-	"time"
-
-	"github.com/cnbattle/aitranslate/whatlang"
 )
 
 var (
@@ -37,16 +33,5 @@ func main() {
 		fmt.Println(Version)
 		return
 	}
-	text = getClipboardString()
-	for {
-		time.Sleep(time.Millisecond * time.Duration(monitoringInterval))
-		newText := getClipboardString()
-		if !whatlang.IsEnglish(newText) {
-			continue
-		}
-		if !strings.EqualFold(text, newText) {
-			text = newText
-			translates()
-		}
-	}
+	translates()
 }
