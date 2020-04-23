@@ -21,9 +21,13 @@
  - [ ] 增加测试代码
 
 ## 使用
-
+### Linux or Mac
 ```
-./aitranslate // 监听粘贴版新的英文内容并翻译
+nohup ./aitranslate & 
+```
+### Windows 
+```
+start /b ./aitranslate
 ```
 
 ## Tips
