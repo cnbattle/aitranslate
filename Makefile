@@ -8,6 +8,9 @@ ARCHS ?= amd64 386
 PACKAGES ?= $(shell $(GO) list ./...)
 SOURCES ?= $(shell find . -name "*.go" -type f)
 TAGS ?=
+UPXLEVEL = 5
+
+$(shell mkdir -p $(DIST)/release-upx)
 
 ifneq (!$(VERSION),)
 	VERSION ?= v0.0.0-$(shell git describe --tags --always | sed 's/-/+/' | sed 's/^v//')
@@ -37,7 +40,7 @@ build: $(EXECUTABLE)
 $(EXECUTABLE):build_images $(SOURCES)
 	$(GO) build -v -tags '$(TAGS)' -ldflags '$(EXTLDFLAGS)-s -w $(LDFLAGS)' -o $@
 
-release: build_images release-dirs release-build release-copy release-check
+release: build_images release-dirs release-build release-copy release-upx release-check release-check-upx
 
 release-dirs:
 	mkdir -p $(DIST)/binaries $(DIST)/release
@@ -51,8 +54,14 @@ release-build:
 release-copy:
 	$(foreach file,$(wildcard $(DIST)/binaries/$(EXECUTABLE)-*),cp $(file) $(DIST)/release/$(notdir $(file));)
 
+release-upx:
+	cd $(DIST)/binaries; $(foreach file,$(wildcard $(DIST)/binaries/$(EXECUTABLE)-*),upx -$(UPXLEVEL) $(notdir $(file)) -o ../release-upx/$(notdir $(file));)
+
 release-check:
 	cd $(DIST)/release; $(foreach file,$(wildcard $(DIST)/release/$(EXECUTABLE)-*),sha256sum $(notdir $(file)) > $(notdir $(file)).sha256;)
+
+release-check-upx:
+	cd $(DIST)/release-upx; $(foreach file,$(wildcard $(DIST)/release-upx/$(EXECUTABLE)-*),sha256sum $(notdir $(file)) > $(notdir $(file)).sha256;)
 
 build_linux_amd64:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GO) build -a -tags '$(TAGS)' -ldflags '$(EXTLDFLAGS)-s -w $(LDFLAGS)' -o release/linux/amd64/$(EXECUTABLE)

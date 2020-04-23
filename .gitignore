@@ -18,5 +18,6 @@
 
 .idea/
 dist/
+release/
 aitranslate
 images.go
