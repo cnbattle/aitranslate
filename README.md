@@ -23,11 +23,11 @@
 ## 使用
 ### Linux or Mac
 ```
-nohup ./aitranslate & 
+nohup ./aitranslate -c [Google|YouDao] & 
 ```
 ### Windows 
 ```
-start /b ./aitranslate
+start /b ./aitranslate.exe -c [Google|YouDao] 
 ```
 
 ## Tips
