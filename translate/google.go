@@ -10,7 +10,7 @@ import (
 type googleTranslate struct{}
 
 func (g googleTranslate) Trans(text string) (str string, err error) {
-	urlStr := "http://translate.google.cn/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=" + text
+	urlStr := "http://translate.google.cn/translate_a/single?client=gtx&sl=auto&tl=zh-CN&&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&q=" + text
 	body, err := utils.HttpGet(urlStr)
 	if err != nil {
 		return "", err

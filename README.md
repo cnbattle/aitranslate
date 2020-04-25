@@ -2,7 +2,7 @@
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
-> 监听粘贴版新的英文内容并翻译成中文
+> 监听粘贴版新的内容并翻译成中文
 
 > 仅在`Manjaro`/ `Windows 10`上测试,`Mac`等其他平台未知,有问题或建议请提交`Pull Requests`或`Issues`
 
@@ -11,7 +11,7 @@
 |![](screenshots/linux.png)|![](screenshots/windows10.png)|
 
 ## 特色
- - 自动翻译 `clipboard` 为英语的内容
+ - 自动翻译 `clipboard` 的内容
  - 支持 `Google Translate` 和 `YouDao Translate`
  - 开源,不用担心 `clipboard` 内容泄漏问题
 

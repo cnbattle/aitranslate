@@ -21,7 +21,7 @@ type translateResult struct {
 }
 
 func (g youDaoTranslate) Trans(text string) (resText string, err error) {
-	urlStr := "http://fanyi.youdao.com/translate?&doctype=json&type=EN2ZH_CN&i=" + text
+	urlStr := "http://fanyi.youdao.com/translate?&doctype=json&type=AUTO2ZH_CN&i=" + text
 	body, err := utils.HttpGet(urlStr)
 	if err != nil {
 		return "", err
