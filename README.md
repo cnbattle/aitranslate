@@ -21,6 +21,18 @@
  - [ ] 增加测试代码
 
 ## 使用
+### 依赖
+- Linux `xsel`或`xclip`
+```
+// Manjaro/Arch:
+sudo pacman -S xsel xclip
+// Debian/Ubuntu
+sudo apt-get install xsel xclip
+// Fedora
+sudo dnf install xsel xclip
+```
+- Windows 10 `PowerShell`
+
 ### Linux or Mac
 ```
 nohup ./aitranslate -c [Google|YouDao] & 

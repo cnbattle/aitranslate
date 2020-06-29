@@ -1,0 +1,13 @@
+[Unit]
+Description=aitranslate
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1s
+ExecStart=/usr/bin/aitranslate
+WorkingDirectory=/usr/bin/
+
+[Install]
+WantedBy=multi-user.target

@@ -11,8 +11,8 @@ var (
 	text string
 	// 通知logo
 	path string
-	// 监听时间间隔
-	monitoringInterval int = 100
+	// 监听时间间隔 毫秒
+	monitoringInterval = 100
 )
 
 func init() {
