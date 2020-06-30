@@ -3,8 +3,8 @@ EXECUTABLE := aitranslate
 GOFMT ?= gofmt "-s"
 GO ?= go
 
-TARGETS ?= linux darwin windows
-ARCHS ?= amd64 386
+TARGETS ?= linux
+ARCHS ?= amd64
 PACKAGES ?= $(shell $(GO) list ./...)
 SOURCES ?= $(shell find . -name "*.go" -type f)
 TAGS ?=

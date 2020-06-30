@@ -1,10 +1,19 @@
 package main
 
 import (
-	"github.com/cnbattle/aitranslate/translate"
+	"github.com/cnbattle/aitranslate/pkg/translate"
 	"github.com/gen2brain/beeep"
 	"strings"
 	"time"
+)
+
+var (
+	// 待翻译的文本
+	text string
+	// 通知logo
+	path string
+	// 监听时间间隔 毫秒
+	monitoringInterval = 100
 )
 
 // translates  Translate and  Notify

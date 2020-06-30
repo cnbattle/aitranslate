@@ -4,7 +4,9 @@
 
 > 监听粘贴版新的内容并翻译成中文
 
-> 仅在`Manjaro`/ `Windows 10`上测试,`Mac`等其他平台未知,有问题或建议请提交`Pull Requests`或`Issues`
+> 仅在`Manjaro`上测试,其他平台未知,有问题或建议请提交`Pull Requests`或`Issues`
+
+> `命令行版`请查看`cli`分支，`master`为`systray`系统托盘版本
 
 |Linux| Windows 10|
 |:---:|:---:|
