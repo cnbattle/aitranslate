@@ -20,3 +20,4 @@
 dist/
 release/
 aitranslate
+go.sum

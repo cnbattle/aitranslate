@@ -93,7 +93,7 @@ func imagesLogoPng() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "images/logo.png", size: 7906, mode: os.FileMode(420), modTime: time.Unix(1593401863, 0)}
+	info := bindataFileInfo{name: "images/logo.png", size: 7906, mode: os.FileMode(511), modTime: time.Unix(1615167419, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -113,7 +113,7 @@ func imagesWarningPng() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "images/warning.png", size: 7259, mode: os.FileMode(420), modTime: time.Unix(1593401863, 0)}
+	info := bindataFileInfo{name: "images/warning.png", size: 7259, mode: os.FileMode(511), modTime: time.Unix(1615167419, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
