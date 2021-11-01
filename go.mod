@@ -8,5 +8,5 @@ require (
 	github.com/gen2brain/beeep v0.0.0-20200526185328-e9c15c258e28
 	github.com/getlantern/systray v1.1.0
 	github.com/skratchdot/open-golang v0.0.0-20200116055534-eef842397966
-	github.com/tidwall/gjson v1.6.8
+	github.com/tidwall/gjson v1.11.0
 )
