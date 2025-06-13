@@ -1,11 +1,11 @@
 module github.com/cnbattle/aitranslate
 
-go 1.21
+go 1.21.5
 
 require (
 	github.com/abadojack/whatlanggo v1.0.1
 	github.com/atotto/clipboard v0.1.4
-	github.com/gen2brain/beeep v0.10.0
+	github.com/gen2brain/beeep v0.11.0
 	github.com/getlantern/systray v1.2.2
 	github.com/skratchdot/open-golang v0.0.0-20200116055534-eef842397966
 	github.com/tidwall/gjson v1.18.0
@@ -23,11 +23,13 @@ require (
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
+	github.com/jackmordaunt/icns/v3 v3.0.1 // indirect
+	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
 	github.com/sergeymakinen/go-bmp v1.0.0 // indirect
 	github.com/sergeymakinen/go-ico v1.0.0-beta.0 // indirect
 	github.com/tadvi/systray v0.0.0-20190226123456-11a2b8fa57af // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
 )
