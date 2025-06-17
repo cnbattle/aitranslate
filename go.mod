@@ -5,7 +5,7 @@ go 1.21.5
 require (
 	github.com/abadojack/whatlanggo v1.0.1
 	github.com/atotto/clipboard v0.1.4
-	github.com/gen2brain/beeep v0.11.0
+	github.com/gen2brain/beeep v0.11.1
 	github.com/getlantern/systray v1.2.2
 	github.com/skratchdot/open-golang v0.0.0-20200116055534-eef842397966
 	github.com/tidwall/gjson v1.18.0
